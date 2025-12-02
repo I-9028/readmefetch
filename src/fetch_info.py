@@ -63,8 +63,6 @@ def fetch_stats(g: Github) -> dict:
 
     return {
         "username": user.login,
-        "followers": user.followers,
-        "following": user.following,
         "public_repos": user.public_repos,
         "public_gists": user.public_gists,
         "total_stars": sum([repo.stargazers_count for repo in get_repos(g)]),
